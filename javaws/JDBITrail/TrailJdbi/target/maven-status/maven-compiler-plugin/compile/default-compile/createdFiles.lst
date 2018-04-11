@@ -1,0 +1,5 @@
+HexJDBI\App.class
+HexJDBI\model\Student.class
+HexJDBI\persistence\DbConnection.class
+HexJDBI\persistence\StudentMapper.class
+HexJDBI\persistence\StudentDAO.class

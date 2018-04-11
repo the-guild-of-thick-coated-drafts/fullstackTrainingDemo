@@ -1,0 +1,3 @@
+Create a simple maven  project
+
+mvn archetype:generate -DgroupId=HexJDBI -DartifactId=TrailJdbi -DarchetypeArtifcatId-maven-archetype-quickstart -DinteractiveMode=false
