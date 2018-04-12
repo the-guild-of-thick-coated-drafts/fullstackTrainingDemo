@@ -1,0 +1,62 @@
+What is an Interface in TypeScript
+If you have experience with any object oriented oriented programming language like C#, Java or C++, then you know an interface is an abstract type. It only contain declarations of properties, methods and events. The implementation for the interface members is provided by a class that implements the interface.
+
+
+
+If a class that implements the interface fails to provide implementation for all the interface members, the language compiler raises an error alerting the developer that something has been missed.
+
+In general, an interface defines a contract (i.e the shape or structure of an API), that an implementing class must adhere to. Even in TypeScript we use the interface for the same purpose.
+
+
+
+We know TypeScript is a strongly typed language. This means every property we define in a TypeScript class has a type associated with it. Similarly every method parameter and return type has a type. As you know by now, TypeScript has several built-in pre-defined types like string, number, boolean etc.
+
+However, the business objects that we usually create in real-world applications like Employee, Customer, Order, Invoice etc, does not have a pre-defined type. In this case, we can use an interface to create a custom type for our business object.
+
+
+Why do we need a service in Angular
+A service in Angular is generally used when you need to reuse data or logic across multiple components. Anytime you see logic or data-access duplicated across multiple components, think about refactoring that piece of logic or data-access code into a service. Using a service ensures we are not violating one of the Software principles - DRY ((Don't repeat yourself). The logic or data access is implemented once in a service, and the service can be used across all the components in our application. 
+
+
+
+Without the service you would have to repeat your code in each component. Imagine the overhead in terms of time and effort required to develop, debug, test and maintain the duplicated code across multiple places instead of having that duplicated code at one central place like a service and reusing that service where required. 
+
+Creating a service in Angular : We will be working with the same example that we have been working with so far in this video series. Add a new TypeScript file to the "employee" folder and name it employee.service.ts. Copy and paste the following code. At the moment we have the data hard-coded in the service method. In a later video we will discuss retrieving data from a remote server using HTTP. 
+
+
+
+
+ng g i IEmployee
+    
+
+{
+ code: string;
+    name: string;
+    gender: string;
+    annualSalary: number;
+    dateOfBirth: string;
+    // To make a property optional use a ?
+    // A class that implements this interface need
+    // not provide implementation for this property
+    department?: string;
+
+    computeMonthlySalary(annualSalary: number): number;
+}
+
+import { IEmployee } from './IEmployee';
+
+ng generate class Employee
+
+ng generate service Employee
+add the constructor
+
+providers: [EmployeeService] - in ngforcomponent
+
+
+
+
+
+
+
+
+

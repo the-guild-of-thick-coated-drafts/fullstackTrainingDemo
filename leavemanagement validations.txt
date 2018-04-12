@@ -1,0 +1,59 @@
+Apply leave:
+------------
+1. start date>end date
+2. Number of days cannot be negative or zero
+3. no of days > start -end
+4. leave balance sufficient or not (empleavebalance-noofdays)
+5. Auto approval of manager
+6. Check if employee has already applied for leave on same period (overlapping dates)               
+Throw all error as an exception(IllegalArgumentException)
+
+   functionality- insert leave details in leave table
+                  updating leave balance in employee table
+
+climain validation:
+ - empid exist or not
+ - check leave balance is zero 
+ - check date format exception -Handling parseException if use parse method 
+ - should not apply leave on the same dates
+
+
+displaying current leave balance 
+
+leavehistory:
+-----------
+climain validation:
+	- empid exist
+        -leaveid exist
+
+pendingrequest:
+--------------
+climain validation:
+	-employee exist or not
+        -pending details available or not
+
+Approve and deny:
+---------------
+    Business logic:
+
+    -  state transition
+        PENDING <-> APPROVED <-> DENIED three-way state transitions
+
+    climain validation:
+         - leaveid exist or not
+         - Invalid status request (PENDING or APPROVED or DENIED)(only uppercase)
+
+
+Basic tests
+Invalid input for the data type
+Including for the menu option
+Non-existing employee id
+Apply w/ balance not sufficient
+startDate > endDate
+numDays > endDate - startDate
+numDays = 0
+PENDING <-> APPROVED <-> DENIED three-way state transitions
+leaveid/employeeid incorrect combinations
+Advanced tests
+No leave before doj
+No pending application overlapping other pending/approved leave for the same employee
