@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The value Attribute</h2>
+<p>The value attribute specifies the initial value for an input field:</p>
+<table width="70%"><tr><td width="10%"></td>
+<td>
+<form action="Welcome.html" method="POST">
+First name: 
+<input type="text" name="firstname" value="John" readonly>
+<br>
+Middle name:
+<input type="text" name="middleName" value="alaan" disabled>
+<br>
+Last name:
+<input type="text" name="lastname" maxlength="40" required>
+<br>User password:
+<input type="password" name="psw">
+<br>Country:
+<input list="Country">
+<datalist id="Country">
+  <option value="India">
+  <option value="China">
+  <option value="Singapore">
+  <option value="Malaysia">
+  <option value="Nepal">
+  </datalist><br>
+  <br>Date of Birth: 
+<input type="date" name="bday" min="1990-01-02" max="2020-12-31">
+<br>
+Gender:
+<input type="radio" name="gender" value="male" checked> Male 
+<input type="radio" name="gender" value="female"> Female 
+<input type="radio" name="gender" value="other"> Other
+<br>
+E-mail:
+<input type="email" name="email">
+<br>
+Languages Known:
+<input type="checkbox" name="Lang" value="Hindi">Hindi  
+<input type="checkbox" name="Lang" value="English"> English
+<br>
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+<br>
+<input type="submit" value="Submit">
+<input type="reset">
+
+</form>
+</td>
+</td>
+</tr>
+</table>
+
+novalidate - removed
+</body>
+</html>

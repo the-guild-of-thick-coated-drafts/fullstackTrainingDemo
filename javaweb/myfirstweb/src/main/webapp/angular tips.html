@@ -1,0 +1,14 @@
+Snapshot: the no-observable alternative
+This application won't re-use the HeroDetailComponent. The user always returns to the hero list to select another hero to view. There's no way to navigate from one hero detail to another hero detail without visiting the list component in between. Therefore, the router creates a new HeroDetailComponent instance every time.
+
+When you know for certain that a HeroDetailComponent instance will never, never, ever be re-used, you can simplify the code with the snapshot.
+
+The route.snapshot provides the initial value of the route parameter map. You can access the parameters directly without subscribing or adding observable operators. It's much simpler to write and read:
+
+src/app/heroes/hero-detail.component.ts (ngOnInit snapshot)
+content_copy
+ngOnInit() {
+  let id = this.route.snapshot.paramMap.get('id');
+
+  this.hero$ = this.service.getHero(id);
+}
